@@ -5,7 +5,7 @@ In TypeScript, it is not always necessary to manually write the type of every va
 
 TypeScript can often guess the type based on the value that is assigned. This makes coding smoother while still keeping the safety that comes with strong typing.
 
-----
+---
 
 ### What Is Type Inference?
 
@@ -43,7 +43,7 @@ Even without writing types manually, TypeScript can still show errors if the val
 
 ```ts
 let score = 90;
-score = "high"; // ❌ Error: Type 'string' is not assignable to type 'number'
+score = "high"; // It should show an error like: Type 'string' is not assignable to type 'number'
 ```
 
 #### Smarter Code Suggestions
@@ -177,6 +177,6 @@ const member: CompleteInfo = {
 
 ---
 
-### Final Thoughts
+### Conclusion
 
 Union and intersection types improve the way TypeScript handles different types of data. By using them, developers can create more accurate and predictable code structures. These tools are especially helpful when building large, scalable applications where clarity and safety are important.
