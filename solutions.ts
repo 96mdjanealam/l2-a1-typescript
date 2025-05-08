@@ -95,3 +95,70 @@ function processValue(value: string | number): number {
 
 // processValue("Bangladesh");
 // processValue(22);
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) {
+    console.log(null);
+    return null;
+  }
+
+  let mostExpensive = products[0];
+
+  for (let i = 1; i < products.length; i++) {
+    if (products[i].price > mostExpensive.price) {
+      mostExpensive = products[i];
+    }
+  }
+
+  console.log(mostExpensive);
+  return mostExpensive;
+}
+
+const products: Product[] = [
+  { name: "monitor", price: 10 },
+  { name: "CPU", price: 25 },
+  { name: "Laptop", price: 50 },
+];
+
+// getMostExpensiveProduct(products);
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  let dayType: string = "Weekday";
+  if (day === Day.Friday || day === Day.Saturday) {
+    dayType = "Weekend";
+  }
+  console.log(dayType);
+  return dayType;
+}
+
+// getDayType(Day.Friday);
+// getDayType(Day.Wednesday);
+
+async function squareAsync(n: number): Promise<number> {
+  if (n < 0) {
+    throw new Error("Negative number not allowed");
+  }
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(n * n);
+    }, 1000);
+  });
+}
+// squareAsync(4).then(console.log);
+// squareAsync(-3).catch(console.error);
