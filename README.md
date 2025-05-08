@@ -5,7 +5,7 @@ In TypeScript, it is not always necessary to manually write the type of every va
 
 TypeScript can often guess the type based on the value that is assigned. This makes coding smoother while still keeping the safety that comes with strong typing.
 
---
+----
 
 ### What Is Type Inference?
 
