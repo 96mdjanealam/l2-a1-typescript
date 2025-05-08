@@ -1,11 +1,11 @@
 
-## Article 1: What Is Type Inference in TypeScript? And Why Is It Helpful?
+# Article 1: What Is Type Inference in TypeScript? And Why Is It Helpful?
 
 In TypeScript, it is not always necessary to manually write the type of every variable. This is possible because of a smart feature called **type inference**.
 
 TypeScript can often guess the type based on the value that is assigned. This makes coding smoother while still keeping the safety that comes with strong typing.
 
----
+--
 
 ### What Is Type Inference?
 
@@ -84,12 +84,9 @@ Type inference is a built-in helper that allows TypeScript to guess types intell
 
 Type inference is especially useful in everyday development where clean and maintainable code is important.
 
-
 ---
 
-
-
-## Article 2: Understanding Union and Intersection Types in TypeScript (With Examples)
+# Article 2: Understanding Union and Intersection Types in TypeScript (With Examples)
 
 In TypeScript, union and intersection types are powerful tools for handling different kinds of data. These types help make code more flexible while keeping it safe and well-structured.
 
