@@ -1,18 +1,14 @@
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper === false) {
     const lowInput = input.toLowerCase();
-    console.log(lowInput);
+
     return lowInput;
   } else {
     const capInput = input.toUpperCase();
-    console.log(capInput);
+
     return capInput;
   }
 }
-
-// formatString("Hello");
-// formatString("Hello", true);
-// formatString("Hello", false);
 
 type item = {
   title: string;
@@ -27,11 +23,9 @@ const books = [
 
 function filterByRating(items: item[]): item[] {
   const filteredItems = items.filter((item) => item.rating >= 4);
-  console.log(filteredItems);
+
   return filteredItems;
 }
-
-// filterByRating(books);
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
@@ -40,12 +34,8 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
       result.push(item);
     }
   }
-  console.log(result);
   return result;
 }
-
-// concatenateArrays(["a"], ["a", "b"]);
-// concatenateArrays([1, 2], [3, 4], [5]);
 
 class vehicle {
   private make: string;
@@ -76,25 +66,20 @@ class Car extends vehicle {
 
 const myCar = new Car("Toyota", 2022, "Supra");
 
-// myCar.getInfo();
-// myCar.getModel();
-
 function processValue(value: string | number): number {
   if (typeof value === "string") {
     const length = value.length;
-    console.log(length);
+
     return length;
   } else if (typeof value === "number") {
     const double = value * 2;
-    console.log(double);
+
     return double;
   } else {
     throw new Error("Invalid type");
   }
 }
 
-// processValue("Bangladesh");
-// processValue(22);
 
 interface Product {
   name: string;
@@ -103,7 +88,6 @@ interface Product {
 
 function getMostExpensiveProduct(products: Product[]): Product | null {
   if (products.length === 0) {
-    console.log(null);
     return null;
   }
 
@@ -115,7 +99,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     }
   }
 
-  console.log(mostExpensive);
   return mostExpensive;
 }
 
@@ -124,8 +107,6 @@ const products: Product[] = [
   { name: "CPU", price: 25 },
   { name: "Laptop", price: 50 },
 ];
-
-// getMostExpensiveProduct(products);
 
 enum Day {
   Monday,
@@ -142,12 +123,9 @@ function getDayType(day: Day): string {
   if (day === Day.Friday || day === Day.Saturday) {
     dayType = "Weekend";
   }
-  console.log(dayType);
+
   return dayType;
 }
-
-// getDayType(Day.Friday);
-// getDayType(Day.Wednesday);
 
 async function squareAsync(n: number): Promise<number> {
   if (n < 0) {
@@ -160,5 +138,3 @@ async function squareAsync(n: number): Promise<number> {
     }, 1000);
   });
 }
-// squareAsync(4).then(console.log);
-// squareAsync(-3).catch(console.error);
