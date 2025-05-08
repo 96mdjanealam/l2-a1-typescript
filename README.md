@@ -157,24 +157,6 @@ In this case, the object `staffMember` includes all properties from both `Employ
 * **Union types** are useful when a value can be one of several types.
 * **Intersection types** are useful when a value must include features from multiple types.
 
-Example for both:
-
-```ts
-// Union type
-type Status = "active" | "inactive";
-
-// Intersection type
-type BasicInfo = { name: string };
-type ContactInfo = { email: string };
-
-type CompleteInfo = BasicInfo & ContactInfo;
-
-const member: CompleteInfo = {
-  name: "Karim",
-  email: "karim@example.com"
-};
-```
-
 ---
 
 ### Conclusion
